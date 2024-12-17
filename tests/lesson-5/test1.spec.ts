@@ -19,6 +19,7 @@ test('Test1', async ({ page }) => {
         await page.locator("//input[@id='dob']").pressSequentially("12011999");
         await page.locator("//input[@id='profile']").setInputFiles("data-test/demo.txt");
         await page.locator("//textarea[@id='bio']").fill("demo");
+        await page.locator("//input[@id='favcolor']").fill("#002aff");
         await page.locator("//input[@id='newsletter']").click();
         await page.locator("//span[@class='slider round']").click();
     });
