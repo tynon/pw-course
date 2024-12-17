@@ -15,9 +15,12 @@ test('Test1', async ({ page }) => {
         await page.locator("//input[@id='traveling']").check();
         await page.locator("//select[@id='interests']").selectOption({ value: "art" });
         await page.locator("//select[@id='country']").selectOption({ value: "uk" });
-        //await page.locator("//input[@id='dob']").fill("12011999");
+        await page.locator("//input[@id='dob']").click();
+        await page.locator("//input[@id='dob']").pressSequentially("12011999");
         await page.locator("//input[@id='profile']").setInputFiles("data-test/demo.txt");
         await page.locator("//textarea[@id='bio']").fill("demo");
+        await page.locator("//input[@id='newsletter']").click();
+        await page.locator("//span[@class='slider round']").click();
     });
     await test.step('Register', async () => {
         await page.locator("//button[@type='submit']").click();
