@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 
-test('Test4', async ({ page }) => {
+test('Personal Notes', async ({ page }) => {
     await test.step('Access page', async () => {
         await page.goto('https://material.playwrightvn.com/');
     });

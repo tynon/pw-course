@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 
-test('Test2', async ({ page }) => {
+test('Add Items To Cart', async ({ page }) => {
     await test.step('Access page', async () => {
         await page.goto('https://material.playwrightvn.com/');
     });
@@ -11,8 +11,7 @@ test('Test2', async ({ page }) => {
         await page.locator("//button[@data-product-id='1']").dblclick();
     });
     await test.step('select 3 Product 2', async () => {
-        await page.locator("//button[@data-product-id='2']").dblclick();
-        await page.locator("//button[@data-product-id='2']").click();
+        await page.locator("//button[@data-product-id='2']").click({clickCount:3});
     });
     await test.step('select 3 Product 1', async () => {
         await page.locator("//button[@data-product-id='3']").click();
